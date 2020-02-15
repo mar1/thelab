@@ -1,4 +1,13 @@
 ---
 label: Index
 hide_body: false
-fields: []
+fields:
+- name: next_party
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Next Party
