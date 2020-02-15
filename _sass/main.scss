@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+
+
+// 2. Set your own initial variables
+
+$navbar-padding-horizontal : 5rem;
+$blue: #e2b72d;
+// 3. Set the derived variables
+// Use the new pink as the primary color
+
+
+@media only screen and (min-width: 1024px) {
+    .navbar-brand {
+        padding-left: 14rem;
+    }
+    }
+@media only screen and (min-width: 1408px) {
+    .slider {
+        text-align: center;
+        padding-left: 2em;
+    }
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../raleway.woff2') format('woff2');
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #0a0a0a;
+    font-family: 'Raleway', sans-serif !important;
+    
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif !important;
+    position: relative;
+    display: inline-block;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 1%;
+    right: 100%;
+    bottom: 0;
+    background: #e2b72d;
+    height: 3px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+h2:hover:before {right: 0 !important;}
+
+.navbar-dropdown {
+    border-top: none !important;
+    background-color: transparent !important;
+}
+.navbar-dropdown > .navbar-item > img {
+    padding-right: 4.6em;
+    min-width: 68px !important;
+}
+
+.navbar-dropdown > .navbar-item > img:hover {
+    min-width: 74px !important;
+}
+
+.navbar-dropdown > .navbar-item:hover {
+    background-color: transparent !important;
+}
+
+// 4. Import the rest of Bulma
+.is-centered 
+{
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
+}
+
+.is-yellow {
+    color: #e2b72d !important;
+}
+
+.logo {
+    width: 240px;
+    height: 202px;
+    background: url("../img/logo-v.png") no-repeat;
+}
+
+.logo:hover {
+    background: url("../img/logoyellow-v.png") no-repeat;
+}
+
+#navbarBasicExample {
+    padding-right: 12rem;
+}
+
+.navbar-item {
+    font-size: 0.8em;
+}
+
+.navbar-item:hover {
+    font-weight: bold;
+    color: #e2b72d !important;
+}
+
+.rs {
+    padding: 1rem 1.5rem !important;
+}
+
+.level {
+    background-color: #0a0a0a !important;
+    color: white !important;
+    border: 0px solid !important;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.contenu {
+    padding-top: 1rem !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
+
+}
+
+.icone {
+    margin: 0 0.3em 1em;
+}
+
+.slide {
+    display:none;
+    border-radius: 2%;
+}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.w3-left:hover, .w3-right:hover {
+    color: #e2b72d !important; 
+}
+
+.content2
+{
+    background-color: white;
+    border-radius: 5px;
+    border-left: 4px solid #e2b72d;
+    border-right: 4px solid #e2b72d;
+    -webkit-box-shadow:0px 0px 6px 0px #e2b72d ;
+    -moz-box-shadow:0px 0px 6px 0px #e2b72d ;
+    box-shadow:0px 0px 6px 0px #e2b72d ;
+}
+
+.nextparty {
+    border-radius: 2%;
+}
+.map {
+    min-height: 400px;
+}
+
+$color: hsl(348, 100%, 61%);
+
+.button-menu {
+    margin-top: 1em;
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 1rem;
+    letter-spacing: .12rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        border-radius: 10rem;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($color, 15%);
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
+    }
+}
+
+.button-email {
+    color: #fff !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 1rem;
+    letter-spacing: .12rem;
+}
+
+.button-email:hover {
+    font-weight: bold;
+}
+footer {
+    background-color: black !important;
+}
+
+@import "../node_modules/bulma/bulma";
